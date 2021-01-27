@@ -6,7 +6,7 @@ public class polynomial
 {
     public static void main(String[] args)
     {
-        final int MAXN = 10;
+        final int MAXN = 10;    /* 多项式项数 */
         final int MAXK = (int) 1e7; /* 被测函数最大重复调用次数 */
         double [] a = new double[MAXN];
         int i;
