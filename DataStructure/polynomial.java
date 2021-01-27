@@ -21,14 +21,14 @@ public class polynomial
             functionOne(MAXN-1, a, 1.1);
         }
         long endTimeOne = System.currentTimeMillis();
-        System.out.println((endTimeOne-startTimeOne) + "ms");
+        System.out.println((endTimeOne - startTimeOne) + "ms");
         long startTimeTwo = System.currentTimeMillis();
         for (i = 0; i < MAXK; i++)
         {
             functionTwo(MAXN-1, a, 1.1);
         }
         long endTimeTwo = System.currentTimeMillis();
-        System.out.println((endTimeTwo-startTimeTwo) + "ms");
+        System.out.println((endTimeTwo - startTimeTwo) + "ms");
 
     }
     /* f(x) = a0 +a1*x+...+an-1*x^(n-1)+an*x^n*/
