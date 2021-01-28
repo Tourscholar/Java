@@ -42,7 +42,7 @@ public class polynomial
         }
         return p;
     }
-    /* f(x) = a0 + x(a1+x(...(an-1+x(an))...)) */
+    /* f(x) = a0 + x*(a1+x*(...(an-1+x*(an))...)) */
     public static double functionTwo(int n, double a[], double x)
     {
         int i;
