@@ -18,20 +18,20 @@ public class polynomial
         long startTimeOne = System.currentTimeMillis();
         for (i = 0; i < MAXK; i++) /* 重复调用函数以获得充分多的运行时间 */
         {
-            functionOne(MAXN-1, a, 1.1);
+            functionOne(MAXN - 1, a, 1.1);
         }
         long endTimeOne = System.currentTimeMillis();
         System.out.println((endTimeOne - startTimeOne) + "ms");
         long startTimeTwo = System.currentTimeMillis();
-        for (i = 0; i < MAXK; i++)
-        {
-            functionTwo(MAXN-1, a, 1.1);
+        for (i = 0; i < MAXK; i++) {
+            functionTwo(MAXN - 1, a, 1.1);
         }
         long endTimeTwo = System.currentTimeMillis();
         System.out.println((endTimeTwo - startTimeTwo) + "ms");
 
     }
-    /* f(x) = a0 +a1*x+...+an-1*x^(n-1)+an*x^n*/
+
+    /* f(x) = a0 +a1*x+...+an-1*x^(n-1)+an*x^n */
     public static double functionOne(int n, double a[], double x)
     {
         int i;
