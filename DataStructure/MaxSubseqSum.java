@@ -6,7 +6,7 @@ package DataStructure;
 public class MaxSubseqSum
 {   
     /* 时间复杂度 T(N) = O(N^3) */
-    public int MaxSubseqSum1 (int A[], int N)
+    public static int MaxSubseqSum1 (int A[], int N)
     {
         int ThisSum, MaxSum = 0;
         int i, j, k;
@@ -25,7 +25,7 @@ public class MaxSubseqSum
     }
 
     /* 时间复杂度 T(N) = O(N^2) */
-    public int MaxSubseqSum2 (int A[], int N)
+    public static int MaxSubseqSum2 (int A[], int N)
     {
         int ThisSum, MaxSum = 0;
         int i, j;
@@ -43,12 +43,12 @@ public class MaxSubseqSum
     }
 
     /* 时间复杂度 T(N) = O(NlogN) */
-    public int DivideAndConquer (int List[], int left, int right)
+    public static int DivideAndConquer (int List[], int left, int right)
     {
         int MaxLeftSum, MaxRightSum;    /* 存放左右子问题的解 */
-        int MaxLeftBorderSum, MaxRightBorderSum;    /* 存放跨分界线的结果 */
+        int MaxLeftBorderSum = 0,  MaxRightBorderSum = 0;    /* 存放跨分界线的结果 */
 
-        int LeftBorderSum, RightBorderSum;
+        int LeftBorderSum = 0, RightBorderSum = 0;
         int center, i;
 
         if (left == right)
@@ -79,13 +79,13 @@ public class MaxSubseqSum
         return Max3 (MaxLeftSum, MaxRightSum, MaxLeftBorderSum + MaxRightBorderSum);
     }
 
-    public int MaxSubseqSum3(int A[], int N)
+    public static int MaxSubseqSum3(int A[], int N)
     {
         return DivideAndConquer(A, 0, N-1);
     }
 
     /* 时间复杂度 T(N) = O(N) */
-    public int MaxSubseqSum4 (int A[], int N)
+    public static int MaxSubseqSum4 (int A[], int N)
     {
         int ThisSum, MaxSum;
         int i;
@@ -99,6 +99,12 @@ public class MaxSubseqSum
                 ThisSum = 0;    /* 则不可能使后面的部分和增大, 抛弃之 */
         }
         return MaxSum;
+    }
+
+    public static int Max3(int A, int B, int C)
+    {
+        /* 返回3个整数中的最大值 */
+        return A > B ? A > C ? A : C : B > C ? B : C;
     }
 
 }
